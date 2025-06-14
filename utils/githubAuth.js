@@ -4,6 +4,8 @@ const REDIRECT_URI = chrome.identity.getRedirectURL();
 const SCOPES = ['repo', 'read:user'].join(' ');
 const AUTH_URL = `https://github.com/login/oauth/authorize?client_id=${CLIENT_ID}&redirect_uri=${encodeURIComponent(REDIRECT_URI)}&scope=${encodeURIComponent(SCOPES)}`;
 
+
+
 export async function loginWithGitHub() {
     return new Promise((resolve, reject) => {
         chrome.identity.launchWebAuthFlow(
@@ -37,7 +39,7 @@ export async function loginWithGitHub() {
                     console.log(tokenResponse)
 
                     const tokenData = await tokenResponse.json();
-                    console.log(tokenData)
+                    console.log({ tokenData })
 
                     if (!tokenData.access_token) {
                         return reject(new Error('Failed to get access token'));
@@ -51,7 +53,7 @@ export async function loginWithGitHub() {
                     });
 
                     const userData = await userResponse.json();
-                    
+
                     chrome.storage.local.set({
                         github_token: tokenData.access_token,
                         github_username: userData.login,

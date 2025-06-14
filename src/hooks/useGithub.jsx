@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { getGithubAccessToken, getGithubUsername } from '../../utils/getAccessToken';
 
-const useGithub = (endpoint, requestType = 'GET', body = null) => {
+const useGithub = (endpoint, header, requestType = 'GET', body = null) => {
     const [data, setData] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
@@ -25,7 +25,7 @@ const useGithub = (endpoint, requestType = 'GET', body = null) => {
 
                 const headers = {
                     Authorization: `Bearer ${github_token}`,
-                    Accept: 'application/vnd.github+json',
+                    Accept: header ?? 'application/vnd.github+json',
                     'Content-Type': 'application/json'
                 };
 

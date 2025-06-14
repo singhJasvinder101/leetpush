@@ -5,6 +5,7 @@ export const SUBMISSION_DETAILS_QUERY = (submissionId) => ({
                 id
                 code
                 lang { name }
+                notes
                 question {
                     questionId
                     titleSlug

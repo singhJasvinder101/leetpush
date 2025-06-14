@@ -1,0 +1,221 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+    --color-bg-primary: #0f172a;
+    --color-bg-secondary: #1e293b;
+    --color-accent-primary: #0ea5e9;
+    --color-accent-secondary: #06b6d4;
+    --color-text-primary: #f8fafc;
+    --color-text-secondary: #94a3b8;
+    --color-border: #334155;
+    --color-success: #10b981;
+    --color-warning: #f59e0b;
+    --color-error: #ef4444;
+    --color-info: #3b82f6;
+  }
+  .submission-dialog {
+    .scrollbar-thin {
+      scrollbar-width: thin;
+    }
+  
+    .scrollbar-thin::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+  
+    .scrollbar-track-gray-800::-webkit-scrollbar-track {
+      background-color: var(--color-bg-secondary);
+      border-radius: 3px;
+    }
+  
+    .scrollbar-thumb-gray-600::-webkit-scrollbar-thumb {
+      background-color: #475569;
+      border-radius: 3px;
+    }
+  
+    .scrollbar-thumb-gray-600::-webkit-scrollbar-thumb:hover {
+      background-color: #64748b;
+    }
+  
+    .backdrop-blur-xl {
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+    }
+  
+    .backdrop-blur-md {
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+  
+    .backdrop-blur-sm {
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+    }
+  
+    @keyframes fade-in {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+  
+    @keyframes slide-up {
+      from {
+        transform: translateY(20px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+  
+    @keyframes pulse-subtle {
+      0%,
+      100% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0.8;
+      }
+    }
+  
+    @keyframes shimmer {
+      0% {
+        background-position: -200% 0;
+      }
+      100% {
+        background-position: 200% 0;
+      }
+    }
+  
+    @keyframes skeleton-pulse {
+      0%,
+      100% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0.5;
+      }
+    }
+  
+    .animate-fade-in {
+      animation: fade-in 0.3s ease-out forwards;
+    }
+  
+    .animate-slide-up {
+      animation: slide-up 0.4s ease-out forwards;
+    }
+  
+    .animate-pulse-subtle {
+      animation: pulse-subtle 2s ease-in-out infinite;
+    }
+  
+    .animate-shimmer {
+      animation: shimmer 2s linear infinite;
+    }
+  
+    .animate-skeleton {
+      animation: skeleton-pulse 1.5s ease-in-out infinite;
+    }
+  
+    .shimmer-bg {
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.05), transparent);
+      background-size: 200% 100%;
+    }
+  
+    .modern-glass {
+      background: rgba(15, 23, 42, 0.8);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(51, 65, 85, 0.6);
+    }
+  
+    .modern-card {
+      background: linear-gradient(to bottom, rgba(30, 41, 59, 0.8), rgba(15, 23, 42, 0.8));
+      border: 1px solid var(--color-border);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease;
+    }
+  
+    .modern-card:hover {
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+      border-color: rgba(51, 65, 85, 0.9);
+    }
+  
+    .modern-input {
+      background: rgba(30, 41, 59, 0.6);
+      border: 1px solid var(--color-border);
+      transition: all 0.3s ease;
+    }
+  
+    .modern-input:hover,
+    .modern-input:focus {
+      border-color: var(--color-accent-primary);
+      box-shadow: 0 0 0 1px rgba(14, 165, 233, 0.2);
+    }
+  
+    .modern-button-primary {
+      background: linear-gradient(to right, var(--color-accent-primary), var(--color-accent-secondary));
+      color: white;
+      border: none;
+      transition: all 0.3s ease;
+    }
+  
+    .modern-button-primary:hover {
+      filter: brightness(1.1);
+      transform: translateY(-1px);
+    }
+  
+    .modern-button-secondary {
+      background: transparent;
+      color: var(--color-text-secondary);
+      border: 1px solid var(--color-border);
+      transition: all 0.3s ease;
+    }
+  
+    .modern-button-secondary:hover {
+      background: rgba(51, 65, 85, 0.3);
+      border-color: var(--color-text-secondary);
+      color: var(--color-text-primary);
+    }
+  
+    .status-easy {
+      background: rgba(16, 185, 129, 0.2);
+      border-color: rgba(16, 185, 129, 0.4);
+      color: #34d399;
+    }
+  
+    .status-medium {
+      background: rgba(245, 158, 11, 0.2);
+      border-color: rgba(245, 158, 11, 0.4);
+      color: #fbbf24;
+    }
+  
+    .status-hard {
+      background: rgba(239, 68, 68, 0.2);
+      border-color: rgba(239, 68, 68, 0.4);
+      color: #f87171;
+    }
+  
+    .skeleton {
+      background: linear-gradient(90deg, rgba(51, 65, 85, 0.3) 25%, rgba(71, 85, 105, 0.5) 50%, rgba(51, 65, 85, 0.3) 75%);
+      background-size: 200% 100%;
+      animation: shimmer 1.5s infinite;
+    }
+  
+    .focus-ring:focus-visible {
+      outline: none;
+      box-shadow: 0 0 0 2px var(--color-accent-primary);
+    }
+  
+    ::selection {
+      background-color: rgba(14, 165, 233, 0.3);
+      color: white;
+    }
+  }

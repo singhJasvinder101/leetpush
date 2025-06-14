@@ -1,3 +1,5 @@
+import { encodeToBase64 } from "@/utils/encode";
+
 export const submitToGithub = async ({
     token,
     username,
@@ -10,7 +12,7 @@ export const submitToGithub = async ({
     const url = `https://api.github.com/repos/${username}/${repo}/contents/${filePath}`;
     const payload = {
         message: commitMessage,
-        content: btoa(content),
+        content: encodeToBase64(content),
         branch: 'main'
     };
     if (sha) payload.sha = sha;
@@ -42,4 +44,27 @@ export const fetchGithubFileSha = async ({ token, username, repo, filePath }) =>
         }
     } catch (e) {}
     return undefined;
+};
+
+
+export const updateRepoTopics = async ({ token, username, repo, topics }) => {
+    console.log({ token, username, repo, topics })
+    const url = `https://api.github.com/repos/${username}/${repo}/topics`;
+
+    const response = await fetch(url, {
+        method: "PUT",
+        headers: {
+            Authorization: `token ${token}`,
+            Accept: "application/vnd.github.mercy-preview+json",
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ names: topics }),
+    });
+
+    if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.message || "Failed to update repo topics");
+    }
+
+    return response.json();
 };
