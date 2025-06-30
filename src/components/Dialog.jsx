@@ -70,6 +70,7 @@ export function initializeReactDialog() {
   if (!container) {
     container = document.createElement("div")
     container.id = "leetcode-extension-react-root"
+    container.className = "tailwind"
     document.body.appendChild(container)
   }
 

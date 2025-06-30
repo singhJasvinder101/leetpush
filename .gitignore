@@ -19,5 +19,6 @@
 .history
 *.log
 
-# secrets
 secrets.*.js
+
+backend/node_modules

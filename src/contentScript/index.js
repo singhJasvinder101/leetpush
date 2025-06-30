@@ -101,61 +101,15 @@ function injectButtons() {
     })
 }
 
-function addFloatingActionButton() {
-    const existingFab = document.querySelector(".lc-fab")
-    if (existingFab) return
 
-    const fab = document.createElement("button")
-    fab.className = "lc-fab"
-    fab.innerHTML = `
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M16 16l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-    `
-    fab.style = `
-        position: fixed;
-        bottom: 24px;
-        right: 24px;
-        width: 56px;
-        height: 56px;
-        border-radius: 50%;
-        background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
-        color: white;
-        border: none;
-        cursor: pointer;
-        box-shadow: 0 8px 32px rgba(59, 130, 246, 0.3);
-        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        z-index: 9999;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    `
+  
 
-    fab.addEventListener("mouseenter", () => {
-        fab.style.transform = "scale(1.1)"
-        fab.style.boxShadow = "0 12px 40px rgba(59, 130, 246, 0.4)"
-    })
-
-    fab.addEventListener("mouseleave", () => {
-        fab.style.transform = "scale(1)"
-        fab.style.boxShadow = "0 8px 32px rgba(59, 130, 246, 0.3)"
-    })
-
-    fab.onclick = () => {
-        if (window.openLeetCodePushAllDialog) {
-            window.openLeetCodePushAllDialog()
-        }
-    }
-
-    document.body.appendChild(fab)
-}
 
 // observing changes due to client-side routing
 const observer = new MutationObserver(() => {
     injectButtons()
-    addFloatingActionButton()
 })
 
 observer.observe(document.body, { childList: true, subtree: true })
 injectButtons()
-addFloatingActionButton()
+// addFloatingActionButton()

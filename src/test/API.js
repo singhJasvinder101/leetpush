@@ -39,10 +39,10 @@ async function getSubmissionCodeOnly(submissionId) {
     console.log('Response:', result);
 
     if (result.data?.submissionDetails?.code) {
-        console.log('✅ Code:', result.data.submissionDetails.code);
+        console.log('Code:', result.data.submissionDetails.code);
         return result.data.submissionDetails.code;
     } else {
-        console.log('❌ Could not retrieve code.');
+        console.log('Could not retrieve code.');
         return null;
     }
 }
@@ -88,10 +88,10 @@ async function getSubmissionCodeOnly(submissionId) {
     console.log('Response:', result);
 
     if (result.data?.submissionDetails?.code) {
-        console.log('✅ Code:', result.data.submissionDetails.code);
+        console.log('Code:', result.data.submissionDetails.code);
         return result.data.submissionDetails.code;
     } else {
-        console.log('❌ Could not retrieve code.');
+        console.log('Could not retrieve code.');
         return null;
     }
 }

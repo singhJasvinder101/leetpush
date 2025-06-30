@@ -1,16 +1,27 @@
 {
   "name": "leetpush",
-  "displayName": "leetpush",
-  "version": "0.0.0",
-  "author": "no one",
-  "description": "",
+  "displayName": "LeetPush",
+  "version": "1.0.0",
+  "author": "LeetPush Contributors",
+  "description": "Seamlessly push your LeetCode solutions to GitHub with one click! Automate your coding journey with beautiful UI and powerful features.",
   "type": "module",
   "license": "MIT",
   "keywords": [
     "chrome-extension",
+    "leetcode",
+    "github",
+    "automation",
+    "coding",
+    "algorithms",
+    "data-structures",
+    "programming",
     "react",
     "vite",
-    "create-chrome-ext"
+    "javascript",
+    "typescript",
+    "developer-tools",
+    "productivity",
+    "open-source"
   ],
   "engines": {
     "node": ">=14.18.0"

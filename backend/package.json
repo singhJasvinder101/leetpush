@@ -1,0 +1,41 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "This is LeetPush backend you are welcome for contribution",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/singhJasvinder101/leetpush.git"
+  },
+  "keywords": [
+    "chrome-extension",
+    "leetcode",
+    "github",
+    "automation",
+    "codingalgorithms",
+    "data-structures",
+    "programming",
+    "react",
+    "vite",
+    "javascript",
+    "typescript",
+    "developer-tools",
+    "productivity",
+    "open-source"
+  ],
+  "author": "Jasvinder Singh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/singhJasvinder101/leetpush/issues"
+  },
+  "homepage": "https://github.com/singhJasvinder101/leetpush#readme",
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "cors": "^2.8.5",
+    "dotenv": "^17.0.0",
+    "express": "^5.1.0"
+  }
+}

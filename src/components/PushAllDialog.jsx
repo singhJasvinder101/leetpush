@@ -26,7 +26,7 @@ const PushAllDialog = ({ isOpen, onClose, onConfirm }) => {
         `}
       >
         <div className="text-center space-y-6">
-          <div className="p-4 bg-yellow-500/20 border border-yellow-500/40 w-fit mx-auto rounded-lg">
+          <div className="p-4 bg-yellow-500/20 border border-yellow-500/40 w-fit mx-auto rounded-xl">
             <AlertCircle className="w-10 h-10 text-yellow-400" />
           </div>
           <div className="space-y-3">
@@ -40,11 +40,11 @@ const PushAllDialog = ({ isOpen, onClose, onConfirm }) => {
             <Button
               variant="outline"
               onClick={onClose}
-              className="modern-button-secondary flex-1 h-12 focus-ring rounded-lg"
+              className="modern-button-secondary flex-1 h-12 focus-ring rounded-xl"
             >
               Cancel
             </Button>
-            <Button onClick={onConfirm} className="modern-button-primary flex-1 h-12 focus-ring rounded-lg">
+            <Button onClick={onConfirm} className="modern-button-primary flex-1 h-12 focus-ring rounded-xl">
               Confirm Push All
             </Button>
           </div>
