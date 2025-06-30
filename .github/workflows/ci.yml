@@ -16,6 +16,7 @@ jobs:
     strategy:
       matrix:
         node-version: [18.x, 20.x]
+        npm-flags: ["--legacy-peer-deps"]
     
     steps:
     - name: Checkout code
@@ -28,7 +29,7 @@ jobs:
         cache: 'npm'
         
     - name: Install dependencies
-      run: npm ci
+      run: npm install ${{ matrix.npm-flags }}
       
     - name: Check code formatting
       run: npm run fmt -- --check
@@ -58,8 +59,8 @@ jobs:
         cache: 'npm'
         
     - name: Install dependencies
-      run: npm ci
-      
+      run: npm install ${{ matrix.npm-flags }}
+
     - name: Run security audit
       run: npm audit --audit-level=moderate
       
@@ -83,7 +84,7 @@ jobs:
         cache: 'npm'
         
     - name: Install dependencies
-      run: npm ci
+      run: npm install ${{ matrix.npm-flags }}
       
     - name: Build and package extension
       run: npm run zip
@@ -113,7 +114,7 @@ jobs:
         cache: 'npm'
         
     - name: Install dependencies
-      run: npm ci
+      run: npm install ${{ matrix.npm-flags }}
       
     - name: Check TypeScript types
       run: npx tsc --noEmit
