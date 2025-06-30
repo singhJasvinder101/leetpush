@@ -65,7 +65,7 @@ const ComplexityAnalyzer = () => {
     const analyzeCode = async () => {
         setLoading(true)
         try {
-            const res = await fetch("https://code-complexity-analyzer.vercel.app/analyze", {
+            const res = await fetch("https://leetpush.vercel.app/analyze", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ code }),
