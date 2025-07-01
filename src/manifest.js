@@ -40,11 +40,7 @@ export default defineManifest({
     },
   ],
 
-  permissions: [
-    'identity',
-    'storage',
-    'sidePanel'
-  ],
+  permissions: ['identity', 'storage', 'sidePanel'],
 
   // chrome_url_overrides: {
   //   newtab: 'newtab.html',
@@ -54,11 +50,7 @@ export default defineManifest({
     client_id: 'Ov23li82naiOl6jKbwE7',
     scopes: ['repo', 'read:user'],
   },
-
 })
-
-
-
 
 // externally_connectable: {
 //   matches: ['https://*.chromiumapp.org/*'],

@@ -1,4 +1,4 @@
-import { Card, CardContent, CardHeader } from "./ui/card"
+import { Card, CardContent, CardHeader } from './ui/card'
 
 const SkeletonCard = () => (
   <Card className="modern-card animate-slide-up">

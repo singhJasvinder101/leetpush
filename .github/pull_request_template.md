@@ -30,9 +30,11 @@ Please delete options that are not relevant.
 Please add screenshots or GIFs to help explain your changes.
 
 **Before:**
+
 <!-- Add before screenshot here -->
 
 **After:**
+
 <!-- Add after screenshot here -->
 
 ## 📝 Checklist
@@ -76,4 +78,3 @@ List any related issues or pull requests:
 - Related to #
 - Depends on #
 - Blocks #
-

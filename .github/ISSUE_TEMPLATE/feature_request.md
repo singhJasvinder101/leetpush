@@ -32,11 +32,12 @@ If applicable, add mockups, screenshots, or examples to help explain your idea.
 ## 📊 User Impact
 
 Who would benefit from this feature and how?
+
 - [ ] All users
 - [ ] New users
 - [ ] Power users
 - [ ] Developers
-- [ ] Other: ____________
+- [ ] Other: ****\_\_\_\_****
 
 ## 🛠️ Implementation Ideas
 
@@ -69,4 +70,3 @@ How important is this feature to you?
 - [ ] I have considered if this fits the project scope
 - [ ] I have provided a clear description
 - [ ] I have explained the user benefit
-

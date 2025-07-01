@@ -1,80 +1,64 @@
-# 🚀 LeetPush - Seamless LeetCode to GitHub Integration
+#  LeetPush – Seamless LeetCode to GitHub Integration
 
 <div align="center">
   <img src="public/img/logo-128.png" alt="LeetPush Logo" width="128" height="128">
-  
-  [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
-  [![Chrome Web Store](https://img.shields.io/badge/Chrome-Extension-blue.svg)]()
-  [![Version](https://img.shields.io/badge/Version-0.0.0-orange.svg)]()
-  [![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-yellow.svg)]()
-  [![React](https://img.shields.io/badge/React-18.3.1-blue.svg)](https://reactjs.org/)
-  [![Vite](https://img.shields.io/badge/Vite-5.4.10-646CFF.svg)](https://vitejs.dev/)
 
-  **Automate your LeetCode journey by seamlessly pushing solutions to GitHub with one click!**
-  
-  [Features](#-features) • [Installation](#-installation) • [Usage](#-usage) • [Contributing](#-contributing) • [Support](#-support)
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
+[![Chrome Extension](https://img.shields.io/badge/Chrome-Extension-blue.svg)]()
+[![Version](https://img.shields.io/badge/Version-0.0.0-orange.svg)]()
+[![React](https://img.shields.io/badge/React-18.3.1-blue.svg)](https://reactjs.org/)
+[![Vite](https://img.shields.io/badge/Vite-5.4.10-646CFF.svg)](https://vitejs.dev/)
+
+  <br />
+  <strong>Push your LeetCode solutions to GitHub automatically—clean, fast, and customizable.</strong>
+
+<br/><br/> <a href="#features">Features</a> • <a href="#installation">Installation</a> • <a href="#architecture">Architecture</a> • <a href="#contributing">Contributing</a> • <a href="#license">License</a>
+
 </div>
 
 ---
 
 ## Features
 
-### **One-Click Solution Sync**
-- **Instant Push**
-- **Smart File Naming**
-- **Language Detection**
-
-### **Repository Management**
-- **Multi-Repository Support**
-- **Custom Directory Structure**
-- **Automatic README Generation**
-
-### **Advanced Configuration**
-- **Custom Commit Messages**
-- **Repository Topics**
-
-### **Beautiful User Experience**
-- **Modern UI**
-- **Smooth Animations**:
-- **Dark Mode Ready**
-- **Responsive Design**
-
-### **Community Features**
-- **Leaderboard**
-- **GitHub Integration**
-- **Real-time Updates**
+* **One-Click Push**: Sync LeetCode submissions instantly to GitHub.
+* **Language Auto-Detection**: Detects and handles multiple languages.
+* **Smart File Naming**: Organizes problems by difficulty and tags.
+* **Custom Directory Structure**: Configure how your GitHub repo is structured.
+* **Automatic README Generation**: Keeps your GitHub README updated.
+* **Custom Commit Messages**: Configure commit formats.
+* **Multi-Repo Support**: Use different repositories if desired.
+* **Modern UI**: Sleek and responsive interface with animations and dark mode.
 
 ---
 
 ## Installation
 
 ### Prerequisites
-- Node.js (≥14.18.0)
-- Google Chrome or Chromium-based browser
-- GitHub account
+
+* Node.js ≥ 14.18.0
+* Google Chrome (or any Chromium-based browser)
+* GitHub Account
 
 ### Development Setup
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/singhJasvinder101/leetpush.git
-   cd leetpush
-   ```
+```bash
+# Clone the repository
+git clone https://github.com/singhJasvinder101/leetpush.git
+cd leetpush
 
-2. **Install dependencies**
-   ```bash
-   npm install
-   ```
+# Install dependencies
+npm install
 
-3. **Start development server**
-   ```bash
-   npm run dev
-   ```
+# Start development server
+npm run dev
+```
 
-4. **Load extension in Chrome**
-   - Open Chrome and navigate to `chrome://extensions/`
-   - Enable "Developer mode"
-   - Click "Load unpacked" and select the `dist` folder
+### Load the Extension in Chrome
+
+1. Go to `chrome://extensions/`
+2. Enable **Developer Mode**
+3. Click **Load Unpacked**
+4. Select the `dist/` directory
 
 ### Production Build
 
@@ -83,106 +67,87 @@ npm run build
 npm run zip
 ```
 
-This creates a production-ready extension in the `dist` folder and a distributable zip file.
+This creates a production-ready build in the `dist/` folder and a zip file for Chrome submission.
 
 ---
 
-
-## 🏗️ Architecture
+## Architecture
 
 ### Tech Stack
-- **Frontend**: React 18.3.1 + Vite
-- **Styling**: Tailwind CSS + Radix UI
-- **Animations**: Framer Motion
-- **Build Tool**: Vite + CRXJS
-- **Language**: JavaScript/TypeScript
 
-### Extension Components
+* **Framework**: React 18 + Vite
+* **Styling**: Tailwind CSS, Radix UI
+* **Animations**: Framer Motion
+* **Extension Build**: CRXJS + Vite
+* **Languages**: TypeScript & JavaScript
+
+### Directory Structure
 
 ```
 src/
-├── background/          # Service worker
-├── contentScript/       # LeetCode page injection
-├── popup/              # Extension popup
-├── options/            # Settings page
-├── sidepanel/          # Chrome side panel
-├── components/         # Reusable UI components
+├── background/         # Service worker scripts
+├── contentScript/      # Injects functionality into LeetCode pages
+├── popup/              # Chrome popup UI
+├── options/            # Settings/configuration UI
+├── sidepanel/          # Chrome side panel UI
+├── components/         # Shared UI components
 ├── hooks/              # Custom React hooks
-└── utils/              # Helper functions
+└── utils/              # Utility/helper functions
 ```
 
-### Key Files
-- `manifest.js` - Extension configuration
-- `contentScript/index.js` - LeetCode page integration
-- `components/SubmissionDialog.jsx` - Main push interface
-- `hooks/useLeetcode.jsx` - LeetCode API integration
-- `hooks/useGithub.jsx` - GitHub API integration
+### Notable Files
+
+* `manifest.js` – Extension metadata and permissions
+* `useLeetcode.jsx` – Handles LeetCode API
+* `useGithub.jsx` – Handles GitHub API
+* `SubmissionDialog.jsx` – Core submission logic interface
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
-We welcome contributions from the community! Please read our [Contributing Guide](CONTRIBUTING.md) for details.
+Contributions are welcome! Please read the [Contributing Guide](CONTRIBUTING.md) before starting.
 
-### Quick Start for Contributors
+### Steps
 
-1. **Fork the repository**
-2. **Create a feature branch**
+1. Fork the repo
+2. Create a feature branch:
+
    ```bash
-   git checkout -b feature/amazing-feature
+   git checkout -b feature/my-feature
    ```
-3. **Make your changes**
-4. **Run tests and linting**
+3. Make your changes and format code:
+
    ```bash
    npm run fmt
    ```
-5. **Commit your changes**
-   ```bash
-   git commit -m 'feat: add amazing feature'
-   ```
-6. **Push to your branch**
-   ```bash
-   git push origin feature/amazing-feature
-   ```
-7. **Open a Pull Request**
+4. Commit and push:
 
-### Development Guidelines
-- Follow existing code style and conventions
-- Write meaningful commit messages
-- Test your changes thoroughly
-- Update documentation as needed
+   ```bash
+   git commit -m 'feat: add my feature'
+   git push origin feature/my-feature
+   ```
+5. Open a Pull Request
 
 ---
-
-
-
-<div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=singhJasvinder101&repo=leetpush&show_icons=true&theme=radical" alt="LeetPush Stats" width="400">
-</div>
-
----
-
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the [MIT License](LICENSE).
 
 ---
 
-## 🌟 Support the Project
+## Support
 
-If LeetPush has helped you in your coding journey, consider:
+If you find this project helpful:
 
-- ⭐ Starring this repository
-- 🐛 Reporting bugs and issues
-- 💡 Suggesting new features
-- 🤝 Contributing to the codebase
-- 📢 Sharing with fellow developers
+* ⭐ Star the repository
+* 🐞 Report issues or bugs
+* 💡 Suggest enhancements
+* 📢 Share it with others
 
----
 
 <div align="center">
   <p><strong>Made with ❤️ by developers, for developers</strong></p>
   <p><em>Happy Coding! 🚀</em></p>
 </div>
-

@@ -58,4 +58,3 @@ Paste logs here
 - [ ] I have tested with the latest version
 - [ ] I have provided all required information
 - [ ] I have included screenshots (if applicable)
-

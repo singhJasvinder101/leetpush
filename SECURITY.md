@@ -159,8 +159,8 @@ We will respond to security reports as follows:
 
 For security-related questions or concerns:
 
-- **Security Email**: security@leetpush.com
-- **General Contact**: support@leetpush.com
+- **Security Email**: jasvindersingh3593@gmail.com
+- **General Contact**: jasvindersingh3593@gmail.com
 - **GitHub Issues**: For non-security bugs only
 - **Discussions**: For general questions
 
@@ -168,7 +168,7 @@ For security-related questions or concerns:
 
 We recognize and thank security researchers who help improve LeetPush:
 
-*No vulnerabilities reported yet - be the first!*
+_No vulnerabilities reported yet - be the first!_
 
 ## 📚 Additional Resources
 
@@ -183,4 +183,3 @@ We recognize and thank security researchers who help improve LeetPush:
 **Version**: 1.0
 
 This security policy is subject to change. Please check back regularly for updates.
-

@@ -22,6 +22,7 @@ By participating in this project, you agree to abide by our [Code of Conduct](ht
 ### Our Standards
 
 **Positive behaviors include:**
+
 - Using welcoming and inclusive language
 - Being respectful of differing viewpoints and experiences
 - Gracefully accepting constructive criticism
@@ -29,6 +30,7 @@ By participating in this project, you agree to abide by our [Code of Conduct](ht
 - Showing empathy towards other community members
 
 **Unacceptable behaviors include:**
+
 - Harassment, trolling, or discriminatory language
 - Personal attacks or political arguments
 - Publishing others' private information without permission
@@ -187,9 +189,11 @@ Your pull request should:
 
 ```markdown
 ## Description
+
 Brief summary of changes and motivation.
 
 ## Type of Change
+
 - [ ] Bug fix
 - [ ] New feature
 - [ ] Documentation update
@@ -197,14 +201,17 @@ Brief summary of changes and motivation.
 - [ ] Refactoring
 
 ## Testing
+
 - [ ] Tested manually in Chrome
 - [ ] Added/updated tests
 - [ ] All existing tests pass
 
 ## Screenshots (if applicable)
+
 [Add screenshots here]
 
 ## Checklist
+
 - [ ] Code follows style guidelines
 - [ ] Self-review completed
 - [ ] Documentation updated
@@ -296,16 +303,19 @@ Brief summary of changes and motivation.
 ### Testing Areas
 
 1. **Authentication Flow**
+
    - GitHub OAuth login/logout
    - Token refresh handling
    - Permission scopes
 
 2. **LeetCode Integration**
+
    - Problem detection
    - Solution parsing
    - Content script injection
 
 3. **GitHub Operations**
+
    - Repository listing
    - File creation/updates
    - Commit message handling
@@ -320,6 +330,7 @@ Brief summary of changes and motivation.
 ### Future Testing Framework
 
 We plan to implement:
+
 - **Unit Tests**: Jest for utility functions
 - **Component Tests**: React Testing Library
 - **E2E Tests**: Playwright for full workflow testing
@@ -343,6 +354,7 @@ We plan to implement:
 A clear description of what the bug is.
 
 **Steps to Reproduce**
+
 1. Go to '...'
 2. Click on '...'
 3. See error
@@ -354,6 +366,7 @@ What you expected to happen.
 If applicable, add screenshots.
 
 **Environment**
+
 - OS: [e.g., Windows 10, macOS Big Sur]
 - Browser: [e.g., Chrome 91.0.4472.124]
 - Extension Version: [e.g., 1.0.0]
@@ -375,6 +388,7 @@ What performance you expected.
 Actual performance with metrics if available.
 
 **Environment**
+
 - Device specs
 - Browser version
 - Network conditions
@@ -451,6 +465,7 @@ We're excited to have you join the LeetPush community! Here's how to get started
 ### Good First Issues
 
 Look for issues labeled:
+
 - `good-first-issue`: Perfect for newcomers
 - `help-wanted`: Areas where we need assistance
 - `documentation`: Improve guides and docs
@@ -461,4 +476,3 @@ Look for issues labeled:
 **Questions?** Don't hesitate to ask in our GitHub Discussions or open an issue. We're here to help!
 
 **Thank you for contributing to LeetPush!** 🚀📚
-

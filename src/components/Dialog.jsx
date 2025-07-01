@@ -1,10 +1,9 @@
-import { useEffect, useMemo, useState } from "react"
-import { createRoot } from "react-dom/client"
-import getDifficultyClass from "@/utils/getDifficultyClass"
-import SubmissionDialog from "./SubmissionDialog"
-import PushAllDialog from "./PushAllDialog"
-import "@/styles/dialog.css"
-
+import { useEffect, useMemo, useState } from 'react'
+import { createRoot } from 'react-dom/client'
+import getDifficultyClass from '@/utils/getDifficultyClass'
+import SubmissionDialog from './SubmissionDialog'
+import PushAllDialog from './PushAllDialog'
+import '@/styles/dialog.css'
 
 const DialogApp = () => {
   const [dialog, setDialog] = useState(null)
@@ -23,31 +22,27 @@ const DialogApp = () => {
   const closePushAllDialog = () => setPushAllOpen(false)
   const handlePushAllConfirm = async () => {
     setPushAllOpen(false)
-    const commitBtns = document.querySelectorAll(".lc-extra-btn")
+    const commitBtns = document.querySelectorAll('.lc-extra-btn')
     for (const commitBtn of commitBtns) {
       commitBtn.click()
       await new Promise((res) => setTimeout(res, 2000))
-      const dialogBtn = Array.from(document.querySelectorAll("button")).find((b) =>
-        b.textContent.includes("Push to GitHub"),
+      const dialogBtn = Array.from(document.querySelectorAll('button')).find((b) =>
+        b.textContent.includes('Push to GitHub'),
       )
       if (dialogBtn) dialogBtn.click()
       await new Promise((res) => setTimeout(res, 2500))
     }
   }
 
-  
-
   useEffect(() => {
     window.openLeetCodeDialog = openDialog
 
-    
     window.openLeetCodePushAllDialog = openPushAllDialog
     return () => {
       delete window.openLeetCodeDialog
       delete window.openLeetCodePushAllDialog
     }
   }, [dialog])
-
 
   return (
     <>
@@ -66,11 +61,11 @@ const DialogApp = () => {
 }
 
 export function initializeReactDialog() {
-  let container = document.getElementById("leetcode-extension-react-root")
+  let container = document.getElementById('leetcode-extension-react-root')
   if (!container) {
-    container = document.createElement("div")
-    container.id = "leetcode-extension-react-root"
-    container.className = "tailwind"
+    container = document.createElement('div')
+    container.id = 'leetcode-extension-react-root'
+    container.className = 'tailwind'
     document.body.appendChild(container)
   }
 

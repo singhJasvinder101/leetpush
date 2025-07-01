@@ -1,5 +1,5 @@
 export const SUBMISSION_DETAILS_QUERY = (submissionId) => ({
-    query: `
+  query: `
         query submissionDetails($submissionId: Int!) {
             submissionDetails(submissionId: $submissionId) {
                 id
@@ -14,13 +14,13 @@ export const SUBMISSION_DETAILS_QUERY = (submissionId) => ({
             }
         }
     `,
-    variables: {
-        submissionId: parseInt(submissionId)
-    }
-});
+  variables: {
+    submissionId: parseInt(submissionId),
+  },
+})
 
 export const QUESTION_DETAILS_QUERY = (titleSlug) => ({
-    query: `
+  query: `
         query questionData($titleSlug: String!) {
             question(titleSlug: $titleSlug) {
                 questionId
@@ -31,7 +31,7 @@ export const QUESTION_DETAILS_QUERY = (titleSlug) => ({
             }
         }
     `,
-    variables: {
-        titleSlug
-    }
-});
+  variables: {
+    titleSlug,
+  },
+})

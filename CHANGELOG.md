@@ -8,17 +8,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+
 - Comprehensive documentation and open-source setup
 - Professional README with feature highlights
 - Contributing guidelines for community participation
 - Enhanced UI/UX with modern design patterns
 
 ### Changed
+
 - Improved project structure and organization
 - Updated package.json with proper metadata
 - Enhanced code quality and consistency
 
 ### Security
+
 - Secure GitHub OAuth implementation
 - Proper token handling and storage
 
@@ -27,6 +30,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [0.0.0] - 2025-06-04
 
 ### Added
+
 - **Initial Release** 🎉
 - Core extension functionality with Chrome Manifest V3
 - LeetCode integration with content script injection
@@ -55,6 +59,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Responsive design for all screen sizes
 
 ### Technical Details
+
 - React 18.3.1 for modern component architecture
 - Vite 5.4.10 for fast development and building
 - TypeScript support for better code quality
@@ -67,6 +72,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Secure token storage and management
 
 ### Development
+
 - Project scaffolded with [create-chrome-ext](https://github.com/guocaoyi/create-chrome-ext)
 - Development environment setup with hot reloading
 - Build system configuration for production deployment
@@ -88,6 +94,7 @@ Guidelines:
 ```
 
 ### Release Types
+
 - 🎉 **feat**: New features
 - 🐛 **fix**: Bug fixes
 - 📚 **docs**: Documentation changes

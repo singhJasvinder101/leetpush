@@ -1,4 +1,4 @@
-import { Card, CardContent, CardHeader } from "./ui/card"
+import { Card, CardContent, CardHeader } from './ui/card'
 
 const SkeletonCodePreview = () => (
   <Card className="modern-card animate-slide-up">
@@ -15,7 +15,7 @@ const SkeletonCodePreview = () => (
           {[...Array(8)].map((_, i) => (
             <div
               key={i}
-              className={`h-4 skeleton rounded ${i % 3 === 0 ? "w-3/4" : i % 2 === 0 ? "w-5/6" : "w-2/3"}`}
+              className={`h-4 skeleton rounded ${i % 3 === 0 ? 'w-3/4' : i % 2 === 0 ? 'w-5/6' : 'w-2/3'}`}
             ></div>
           ))}
         </div>

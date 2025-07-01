@@ -1,10 +1,10 @@
-import { useState } from "react"
-import { motion, AnimatePresence } from "framer-motion"
+import { useState } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
 import '@/styles/dialog.css'
-import GitHubLoginButton from "@/components/github/GithubLoginButton"
-import Memes from "@/components/Memes"
-import Leaderboard from "@/components/LeaderBoard"
-import ComplexityAnalyzer from "@/components/ComplexityAnalyzer"
+import GitHubLoginButton from '@/components/github/GithubLoginButton'
+import Memes from '@/components/Memes'
+import Leaderboard from '@/components/LeaderBoard'
+import ComplexityAnalyzer from '@/components/ComplexityAnalyzer'
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -22,7 +22,7 @@ const itemVariants = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.4, ease: "easeOut" },
+    transition: { duration: 0.4, ease: 'easeOut' },
   },
 }
 
@@ -31,7 +31,7 @@ const tabContentVariants = {
   visible: {
     opacity: 1,
     x: 0,
-    transition: { duration: 0.3, ease: "easeOut" },
+    transition: { duration: 0.3, ease: 'easeOut' },
   },
   exit: {
     opacity: 0,
@@ -41,7 +41,7 @@ const tabContentVariants = {
 }
 
 export const Popup = () => {
-  const [tab, setTab] = useState("memes")
+  const [tab, setTab] = useState('analyzer')
 
   return (
     <div className="tailwind">
@@ -70,17 +70,20 @@ export const Popup = () => {
           <motion.div className="relative" variants={itemVariants}>
             <div className="flex bg-white/60 backdrop-blur-sm rounded-xl p-1 shadow-lg border border-zinc-200/50">
               <motion.button
-                className={`flex-1 py-3 px-4 rounded-xl font-semibold transition-all duration-300 relative ${tab === "leaderboard" ? "text-white shadow-lg" : "text-zinc-600 hover:text-slate-800"
-                  }`}
-                onClick={() => setTab("leaderboard")}
+                className={`flex-1 py-3 px-4 rounded-xl font-semibold transition-all duration-300 relative ${
+                  tab === 'leaderboard'
+                    ? 'text-white shadow-lg'
+                    : 'text-zinc-600 hover:text-slate-800'
+                }`}
+                onClick={() => setTab('leaderboard')}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >
-                {tab === "leaderboard" && (
+                {tab === 'leaderboard' && (
                   <motion.div
                     className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-fuchsia-500 rounded-xl"
                     layoutId="activeTab"
-                    transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
+                    transition={{ type: 'spring', bounce: 0.2, duration: 0.6 }}
                   />
                 )}
                 <span className="relative flex items-center justify-center gap-2">
@@ -92,53 +95,58 @@ export const Popup = () => {
               </motion.button>
 
               <motion.button
-                className={`flex-1 py-3 px-4 rounded-xl font-semibold transition-all duration-300 relative ${tab === "memes" ? "text-white shadow-lg" : "text-zinc-600 hover:text-slate-800"
-                  }`}
-                onClick={() => setTab("memes")}
+                className={`flex-1 py-3 px-4 rounded-xl font-semibold transition-all duration-300 relative ${
+                  tab === 'memes' ? 'text-white shadow-lg' : 'text-zinc-600 hover:text-slate-800'
+                }`}
+                onClick={() => setTab('memes')}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >
-                {tab === "memes" && (
+                {tab === 'memes' && (
                   <motion.div
                     className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-fuchsia-500 rounded-xl"
                     layoutId="activeTab"
-                    transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
+                    transition={{ type: 'spring', bounce: 0.2, duration: 0.6 }}
                   />
                 )}
                 <span className="relative flex items-center justify-center gap-2">
-                  <span className="text-sm">😄</span>
+                  <span className="text-sm"></span>
                   Memes
                 </span>
               </motion.button>
 
               <motion.button
-                className={`flex-1 py-3 px-4 rounded-xl font-semibold transition-all duration-300 relative ${tab === "analyzer" ? "text-white shadow-lg" : "text-zinc-600 hover:text-slate-800"}`}
-                onClick={() => setTab("analyzer")}
+                className={`flex-1 py-3 px-4 rounded-xl font-semibold transition-all duration-300 relative ${tab === 'analyzer' ? 'text-white shadow-lg' : 'text-zinc-600 hover:text-slate-800'}`}
+                onClick={() => setTab('analyzer')}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >
-                {tab === "analyzer" && (
+                {tab === 'analyzer' && (
                   <motion.div
                     className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-fuchsia-500 rounded-xl"
                     layoutId="activeTab"
-                    transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
+                    transition={{ type: 'spring', bounce: 0.2, duration: 0.6 }}
                   />
                 )}
                 <span className="relative flex items-center justify-center gap-2">
-                  🧠 Complexity
+                   Complexity
                 </span>
               </motion.button>
-
             </div>
           </motion.div>
 
-
           <div className="min-h-[320px]">
             <AnimatePresence mode="wait">
-              <motion.div key={tab} variants={tabContentVariants} initial="hidden" animate="visible" exit="exit">
-                {tab === "leaderboard" && <Leaderboard />}
-                {tab === "memes" && <Memes />}
-                {tab === "analyzer" && <ComplexityAnalyzer />}
+              <motion.div
+                key={tab}
+                variants={tabContentVariants}
+                initial="hidden"
+                animate="visible"
+                exit="exit"
+              >
+                {tab === 'leaderboard' && <Leaderboard />}
+                {tab === 'memes' && <Memes />}
+                {tab === 'analyzer' && <ComplexityAnalyzer />}
               </motion.div>
             </AnimatePresence>
           </div>

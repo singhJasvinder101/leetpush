@@ -1,26 +1,25 @@
-const express = require("express");
-const bodyParser = require("body-parser");
-const cors = require("cors");
-require("dotenv").config();
+const express = require('express')
+const bodyParser = require('body-parser')
+const cors = require('cors')
+require('dotenv').config()
 
-const { GoogleGenerativeAI } = require("@google/generative-ai");
+const { GoogleGenerativeAI } = require('@google/generative-ai')
 
-const app = express();
-app.use(cors());
-app.use(bodyParser.json());
+const app = express()
+app.use(cors())
+app.use(bodyParser.json())
 
+console.log('ENV KEY:', process.env.GEMINI_API_KEY ?? 'NOT SET')
 
-console.log("ENV KEY:", process.env.GEMINI_API_KEY ?? "NOT SET");
+const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY)
 
-const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
+app.post('/analyze', async (req, res) => {
+  const { code } = req.body
 
-app.post("/analyze", async (req, res) => {
-  const { code } = req.body;
-
-  if (!code) return res.status(400).json({ error: "Code is required" });
+  if (!code) return res.status(400).json({ error: 'Code is required' })
 
   try {
-    const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+    const model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash' })
 
     const prompt = `
 You are a software performance expert. Your job is to analyze **any code** (regardless of language) and return:
@@ -119,25 +118,25 @@ Now analyze this:
 \`\`\`
 ${code}
 \`\`\`
-`;
+`
 
-    const result = await model.generateContent(prompt);
-    const raw = result.response.text();
+    const result = await model.generateContent(prompt)
+    const raw = result.response.text()
 
-    const jsonStart = raw.indexOf("{");
-    const jsonEnd = raw.lastIndexOf("}");
-    const jsonString = raw.substring(jsonStart, jsonEnd + 1);
-    const json = JSON.parse(jsonString);
+    const jsonStart = raw.indexOf('{')
+    const jsonEnd = raw.lastIndexOf('}')
+    const jsonString = raw.substring(jsonStart, jsonEnd + 1)
+    const json = JSON.parse(jsonString)
 
-    res.json(json);
+    res.json(json)
   } catch (error) {
-    console.error("Gemini Analysis Error:", error);
+    console.error('Gemini Analysis Error:', error)
     res.status(500).json({
-      error: "Failed to analyze code",
+      error: 'Failed to analyze code',
       details: error.message,
-    });
+    })
   }
-});
+})
 
-const PORT = 3000;
-app.listen(PORT, () => console.log(`🚀 Server running on http://localhost:${PORT}`));
+const PORT = 3000
+app.listen(PORT, () => console.log(`🚀 Server running on http://localhost:${PORT}`))
