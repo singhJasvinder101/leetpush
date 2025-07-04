@@ -18,6 +18,13 @@
 
 ---
 
+# Demo Video
+[![Demo Vide](http://img.youtube.com/vi/Bz5dn61Hgs0/0.jpg)](http://www.youtube.com/watch?v=Bz5dn61Hgs0 "Homework AI Demo")
+
+http://www.youtube.com/watch?v=Bz5dn61Hgs0
+
+---
+
 ## Features
 
 * **One-Click Push**: Sync LeetCode submissions instantly to GitHub.
