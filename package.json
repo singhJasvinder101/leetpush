@@ -1,9 +1,9 @@
 {
   "name": "leetpush",
   "displayName": "LeetPush",
-  "version": "1.0.0",
-  "author": "LeetPush Contributors",
-  "description": "Seamlessly push your LeetCode solutions to GitHub with one click! Automate your coding journey with beautiful UI and powerful features.",
+  "version": "1.0.1",
+  "author": "Jasvinder Singh",
+  "description": "Push LeetCode solutions to GitHub automatically. Clean UI and powerful features to enhance your coding workflow.",
   "type": "module",
   "license": "MIT",
   "keywords": [

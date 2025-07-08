@@ -248,7 +248,7 @@ const ComplexityAnalyzer = () => {
                           >
                             <span className="font-medium text-slate-700">{item.label}:</span>
                             <motion.span
-                              className={`px-3 py-1 bg-gradient-to-r ${item.color} text-white rounded-full text-sm font-semibold`}
+                              className={`px-3 py-1 bg-white border ${item.color} border-${item.color.split('-')[1]}-300 rounded-full text-sm font-semibold`}
                               whileHover={{ scale: 1.05 }}
                             >
                               {item.value}
@@ -302,7 +302,7 @@ const ComplexityAnalyzer = () => {
                           >
                             <span className="font-medium text-slate-700">{item.label}:</span>
                             <motion.span
-                              className={`px-3 py-1 bg-gradient-to-r ${item.color} text-white rounded-full text-sm font-semibold`}
+                              className={`px-3 py-1 bg-white border ${item.color} border-${item.color.split('-')[1]}-300 rounded-full text-sm font-semibold`}
                               whileHover={{ scale: 1.05 }}
                             >
                               {item.value}
@@ -330,7 +330,7 @@ const ComplexityAnalyzer = () => {
                       </div>
                       <h3 className="text-xl font-bold text-slate-800">Optimization Suggestions</h3>
                     </div>
-                    <p className="text-slate-700 leading-relaxed">{result.optimization}</p>
+                    <p className="text-slate-700 text-md">{result.optimization}</p>
                   </motion.div>
                 </motion.div>
               )

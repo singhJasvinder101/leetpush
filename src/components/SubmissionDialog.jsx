@@ -193,7 +193,7 @@ const SubmissionDialog = ({ id, isOpen, onClose, title, content }) => {
         sha,
       })
 
-      if (pushReadme && questionData?.question?.content && leetcodeData?.submissionDetails?.notes) {
+      if (pushReadme && questionData?.question?.content) {
         const readmePath = safeDirectory ? `${safeDirectory}/README.md` : 'README.md'
         const readmeSha = await fetchGithubFileSha({
           token,
@@ -375,11 +375,10 @@ const SubmissionDialog = ({ id, isOpen, onClose, title, content }) => {
                                       <span>{repo.name}</span>
                                     </div>
                                     <Badge
-                                      className={`text-xs rounded-full ${
-                                        repo.private
+                                      className={`text-xs rounded-full ${repo.private
                                           ? 'bg-yellow-500/20 text-yellow-300 border-yellow-500/40'
                                           : 'bg-green-500/20 text-green-300 border-green-500/40'
-                                      }`}
+                                        }`}
                                     >
                                       {repo.private ? 'Private' : 'Public'}
                                     </Badge>
