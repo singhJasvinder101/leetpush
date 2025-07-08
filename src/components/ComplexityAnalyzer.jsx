@@ -197,7 +197,7 @@ const ComplexityAnalyzer = () => {
                 </div>
               </motion.div>
             ) : (
-              result.summary && (
+              !result.error && result.timeComplexity && result.spaceComplexity && result.optimization && (
                 <motion.div className="space-y-6" variants={containerVariants}>
                   <div className="grid md:grid-cols-2 gap-6">
                     <motion.div
