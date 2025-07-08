@@ -16,7 +16,7 @@ const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY)
 app.post('/analyze', async (req, res) => {
   const { code } = req.body
 
-  if (!code) return res.status(400).json({ error: 'Code is required' })
+  if (!code) return res.status(400).json({ error: 'Code is required'})
 
   try {
     const model = genAI.getGenerativeModel({ model: 'gemini-2.5-flash-lite-preview-06-17' })
