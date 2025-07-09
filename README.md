@@ -16,27 +16,28 @@
 
 </div>
 
----
+
 
 # Demo Video
 [![Demo Vide](http://img.youtube.com/vi/Bz5dn61Hgs0/0.jpg)](http://www.youtube.com/watch?v=Bz5dn61Hgs0 "Homework AI Demo")
 
 http://www.youtube.com/watch?v=Bz5dn61Hgs0
 
----
+
 
 ## Features
 
-* **One-Click Push**: Sync LeetCode submissions instantly to GitHub.
-* **Language Auto-Detection**: Detects and handles multiple languages.
-* **Smart File Naming**: Organizes problems by difficulty and tags.
-* **Custom Directory Structure**: Configure how your GitHub repo is structured.
-* **Automatic README Generation**: Keeps your GitHub README updated.
-* **Custom Commit Messages**: Configure commit formats.
-* **Multi-Repo Support**: Use different repositories if desired.
-* **Modern UI**: Sleek and responsive interface with animations and dark mode.
+* *One-Click Push*
+* *Contribution Leaderboard*
+* *Language Auto-Detection*
+* *Custom Directory Structure*
+* *Automatic README Generation*
+* *Custom Commit Messages*
+* *Multi-Repo Support*
+* *Complexity Analyzer*
+* *Contribution Leaderboard*
+* *Memes for fun*
 
----
 
 ## Installation
 
@@ -76,7 +77,7 @@ npm run zip
 
 This creates a production-ready build in the `dist/` folder and a zip file for Chrome submission.
 
----
+
 
 ## Architecture
 
@@ -87,29 +88,6 @@ This creates a production-ready build in the `dist/` folder and a zip file for C
 * **Animations**: Framer Motion
 * **Extension Build**: CRXJS + Vite
 * **Languages**: TypeScript & JavaScript
-
-### Directory Structure
-
-```
-src/
-├── background/         # Service worker scripts
-├── contentScript/      # Injects functionality into LeetCode pages
-├── popup/              # Chrome popup UI
-├── options/            # Settings/configuration UI
-├── sidepanel/          # Chrome side panel UI
-├── components/         # Shared UI components
-├── hooks/              # Custom React hooks
-└── utils/              # Utility/helper functions
-```
-
-### Notable Files
-
-* `manifest.js` – Extension metadata and permissions
-* `useLeetcode.jsx` – Handles LeetCode API
-* `useGithub.jsx` – Handles GitHub API
-* `SubmissionDialog.jsx` – Core submission logic interface
-
----
 
 ## Contributing
 
@@ -136,13 +114,11 @@ Contributions are welcome! Please read the [Contributing Guide](CONTRIBUTING.md)
    ```
 5. Open a Pull Request
 
----
 
 ## 📄 License
 
 This project is licensed under the [MIT License](LICENSE).
 
----
 
 ## Support
 
