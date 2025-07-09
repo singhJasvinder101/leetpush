@@ -50,14 +50,11 @@ http://www.youtube.com/watch?v=Bz5dn61Hgs0
 ### Development Setup
 
 ```bash
-# Clone the repository
 git clone https://github.com/singhJasvinder101/leetpush.git
 cd leetpush
 
-# Install dependencies
 npm install
 
-# Start development server
 npm run dev
 ```
 
