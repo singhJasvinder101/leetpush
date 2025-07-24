@@ -1,4 +1,4 @@
-#  LeetPush – Seamless LeetCode to GitHub Integration
+#  LeetPush – Automate Your LeetCode to GitHub Workflow
 
 <div align="center">
   <img src="public/img/logo-128.png" alt="LeetPush Logo" width="128" height="128">
@@ -12,32 +12,57 @@
   <br />
   <strong>Push your LeetCode solutions to GitHub automatically—clean, fast, and customizable.</strong>
 
-<br/><br/> <a href="#features">Features</a> • <a href="#installation">Installation</a> • <a href="#architecture">Architecture</a> • <a href="#contributing">Contributing</a> • <a href="#license">License</a>
 
 </div>
 
 
+# 
 
-# Demo Video
-[![Demo Vide](http://img.youtube.com/vi/Bz5dn61Hgs0/0.jpg)](http://www.youtube.com/watch?v=Bz5dn61Hgs0 "Homework AI Demo")
+<p style="margin-top: 40px;" align="">
+  <img src="https://github.com/user-attachments/assets/d251ec06-887b-4409-b676-0f85051fd8d2" alt="leetpush LeetCode to GitHub Demo">
+  
+  [Demo Video](http://www.youtube.com/watch?v=Bz5dn61Hgs0)
+</p>
 
-http://www.youtube.com/watch?v=Bz5dn61Hgs0
 
 
+## Why Use leetpush?
+
+Ever solved a brilliant LeetCode problem, only to lose the code or forget your logic? leetpush solves this by providing LeetCode-to-GitHub integration.
+
+* **Build a Portfolio:** Automatically create a GitHub repository that showcases your coding skills and dedication to potential employers.
+* **Track Your Progress:** Keep a detailed commit history of every problem you solve, making it easy to review your improvement over time.
+* **Never Lose Your Work:** Your solutions are safely backed up in your own GitHub repository, accessible from anywhere.
+* **Focus on Solving:** Forget the hassle of copy-pasting. We handle the backup, so you can focus on the problem.
 
 ## Features
 
-* *One-Click Push*
-* *Contribution Leaderboard*
-* *Language Auto-Detection*
-* *Custom Directory Structure*
-* *Automatic README Generation*
-* *Custom Commit Messages*
-* *Multi-Repo Support*
-* *Complexity Analyzer*
-* *Contribution Leaderboard*
-* *Memes for fun*
+*  **Automatic Sync:** Pushes your solution to GitHub the moment you successfully submit it on LeetCode.
+*  **Problem Metadata:** Automatically includes the problem title, description, difficulty, and other details in the commit.
+*  **Language Detection:** Correctly identifies the programming language and creates files with the proper extension (e.g., `.py`, `.js`, `.java`).
+*  **Private & Public Repos:** You have full control over whether your solutions repository is public or private.
+*  **Easy Setup:** Get up and running in under two minutes.
 
+
+
+## Getting Started: 2-Minute Setup
+
+1.  **Install the Extension:**
+    * Get `leetpush` from the [**Chrome Web Store**](https://chromewebstore.google.com/detail/leetpush/fppdnbfkhpmppifbmmchnhpnmmickbin).
+
+2.  **Configure `leetpush`:**
+    * Click on the `leetpush` icon in your browser toolbar.
+    * Follow the on-screen instructions to link your GitHub account and select a repository. If you don't have one, `leetpush` can help you create it.
+
+That's it! You're ready to go.
+
+## How It Works
+
+Once configured, `leetpush` works silently in the background.
+
+1.  Navigate to any problem on LeetCode and write your solution.
+2.  Click the "Submit" button on LeetCode.
+3.  Once your solution is accepted, `leetpush` automatically commits and pushes the code and problem details to your designated GitHub repository.
 
 ## Installation
 
@@ -98,18 +123,13 @@ Contributions are welcome! Please read the [Contributing Guide](CONTRIBUTING.md)
    ```bash
    git checkout -b feature/my-feature
    ```
-3. Make your changes and format code:
-
-   ```bash
-   npm run fmt
-   ```
-4. Commit and push:
+3. Commit and push:
 
    ```bash
    git commit -m 'feat: add my feature'
    git push origin feature/my-feature
    ```
-5. Open a Pull Request
+4. Open a Pull Request
 
 
 ## 📄 License
@@ -128,6 +148,6 @@ If you find this project helpful:
 
 
 <div align="center">
-  <p><strong>Made with ❤️ by developers, for developers</strong></p>
+  <p><strong>Made with ❤️</strong></p>
   <p><em>Happy Coding! 🚀</em></p>
 </div>
