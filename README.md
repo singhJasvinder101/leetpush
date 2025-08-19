@@ -30,16 +30,16 @@
 
 Ever solved a brilliant LeetCode problem, only to lose the code or forget your logic? leetpush solves this by providing LeetCode-to-GitHub integration.
 
-* **Build a Portfolio:** Automatically create a GitHub repository that showcases your coding skills and dedication to potential employers.
-* **Track Your Progress:** Keep a detailed commit history of every problem you solve, making it easy to review your improvement over time.
-* **Never Lose Your Work:** Your solutions are safely backed up in your own GitHub repository, accessible from anywhere.
+* **Build a Portfolio:** Automatically create a GitHub repository that showcases your coding skills to employers.
+* **Track Your Progress:** Keep commit history of every problem you solve, making it easy to review your improvement over time.
+* **Never Lose Your Work:** Your solutions are backed up in *your own* GitHub repository.
 * **Focus on Solving:** Forget the hassle of copy-pasting. We handle the backup, so you can focus on the problem.
 
 ## Features
 
-*  **Automatic Sync:** Pushes your solution to GitHub the moment you successfully submit it on LeetCode.
-*  **Problem Metadata:** Automatically includes the problem title, description, difficulty, and other details in the commit.
-*  **Language Detection:** Correctly identifies the programming language and creates files with the proper extension (e.g., `.py`, `.js`, `.java`).
+*  **Automatic Sync:** Pushes your solution to GitHub the moment with just single click.
+*  **Problem Metadata:** Automatically includes the problem title and other details in the commit.
+*  **Language Detection:** Correctly identifies the programming language (e.g., `.py`, `.js`, `.java`).
 *  **Private & Public Repos:** You have full control over whether your solutions repository is public or private.
 *  **Easy Setup:** Get up and running in under two minutes.
 
@@ -97,9 +97,7 @@ npm run build
 npm run zip
 ```
 
-This creates a production-ready build in the `dist/` folder and a zip file for Chrome submission.
-
-
+1st command creates a production-ready build in the `dist/` (distribution) folder and 2nd command will create a zip file.
 
 ## Architecture
 
@@ -132,7 +130,7 @@ Contributions are welcome! Please read the [Contributing Guide](CONTRIBUTING.md)
 4. Open a Pull Request
 
 
-## 📄 License
+## License
 
 This project is licensed under the [MIT License](LICENSE).
 
@@ -148,6 +146,6 @@ If you find this project helpful:
 
 
 <div align="center">
-  <p><strong>Made with ❤️</strong></p>
-  <p><em>Happy Coding! 🚀</em></p>
+  <p><strong>Made with ❤️</strong> By Jasvider Singh</p>
+  <p><em>Happy Coding!</em></p>
 </div>
