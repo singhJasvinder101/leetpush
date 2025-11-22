@@ -19,7 +19,7 @@ app.post('/analyze', async (req, res) => {
   if (!code) return res.status(400).json({ error: 'Code is required' })
 
   try {
-    const model = genAI.getGenerativeModel({ model: 'gemini-2.5-flash-lite-preview-06-17' })
+    const model = genAI.getGenerativeModel({ model: 'gemini-2.0-flash' })
 
     const prompt = `
     You are a software performance expert. Your job is to analyze **any code** (in any language) and return:
